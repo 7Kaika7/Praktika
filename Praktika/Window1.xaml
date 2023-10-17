@@ -5,8 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Praktika"
         mc:Ignorable="d"
-        Title="Window1" Height="450" Width="800">
+           Title="MainWindow" Height="450" Width="600" Background="#FF167682" Foreground="White">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Регистрация"  Grid.ColumnSpan="2" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="25" Margin="225,33,0,0" FontFamily="Segoe Print"/>
+        <TextBlock Text="Логин" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="25" Margin="0,109,0,0" FontFamily="Segoe Print"/>
+        <TextBox x:Name="login" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Top" Height="30" Width="200"  FontSize="20" Margin="0,112,0,0" FontFamily="Segoe Print"/>
+        <TextBlock Text="Пароль" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="25" FontFamily="Segoe Print" Margin="0,177,0,0" Grid.RowSpan="2"/>
+        <TextBox x:Name="povt_parol" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" Height="30" Width="200"  FontSize="20" FontFamily="Segoe Print" Margin="0,37,0,0"/>
+        <TextBlock Text="Повторите пароль" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="25" FontFamily="Segoe Print" Margin="27,30,0,0"/>
+        <TextBox x:Name="parol" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Height="30" Width="200"  FontSize="20" FontFamily="Segoe Print" Margin="0,187,0,0"/>
+        <Button Content="Вернуться" Grid.ColumnSpan="2" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="200"  FontSize="20"  Margin="200,149,0,0" FontFamily="Segoe Print" FontWeight="Bold" Click="vxod_Cl"/>
+        <Button  Content="Зарегистрироваться" Grid.ColumnSpan="2" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Height="35" Width="300"  FontSize="20"  Margin="150,102,0,0" FontFamily="Segoe Print" FontWeight="Bold" Click="reg_Cl"/>
     </Grid>
 </Window>
