@@ -24,3 +24,12 @@ C:\Users\student\source\repos\21ИС-1\Praktika\Praktika\obj\Debug\net6.0-window
 C:\Users\student\source\repos\21ИС-1\Praktika\Praktika\obj\Debug\net6.0-windows\ref\Praktika.dll
 C:\Users\student\source\repos\21ИС-1\Praktika\Praktika\obj\Debug\net6.0-windows\Window2.g.cs
 C:\Users\student\source\repos\21ИС-1\Praktika\Praktika\obj\Debug\net6.0-windows\Window2.baml
+C:\Users\student\source\repos\21ИС-1\Praktika\Praktika\bin\Debug\net6.0-windows\Praktika.dll.config
+C:\Users\student\source\repos\21ИС-1\Praktika\Praktika\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\student\source\repos\21ИС-1\Praktika\Praktika\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\student\source\repos\21ИС-1\Praktika\Praktika\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\student\source\repos\21ИС-1\Praktika\Praktika\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\student\source\repos\21ИС-1\Praktika\Praktika\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\student\source\repos\21ИС-1\Praktika\Praktika\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\student\source\repos\21ИС-1\Praktika\Praktika\obj\Debug\net6.0-windows\Praktika.csproj.AssemblyReference.cache
+C:\Users\student\source\repos\21ИС-1\Praktika\Praktika\obj\Debug\net6.0-windows\Praktika.csproj.CopyComplete

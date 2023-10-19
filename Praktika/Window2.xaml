@@ -5,8 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Praktika"
         mc:Ignorable="d"
-        Title="Window2" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="450" Width="770" Background="#FF167682" Foreground="White">
+    <Canvas>
+        <Menu Height="40" VerticalAlignment="Top" FontSize="25" Canvas.Left="10" Canvas.Top="10">
+            <MenuItem Header="Продукты" >
+                <MenuItem x:Name="ml" Click="milk" Header="Молоко" ></MenuItem>
+                <MenuItem x:Name="br" Click="bread" Header="Хлеб" ></MenuItem>
+                <MenuItem x:Name="ch" Click="cheese" Header="Сыр" ></MenuItem>
+            </MenuItem>
+        </Menu>
+        <TextBlock Width="220" Height="40" Background="White" FontSize="25" Foreground="#FF167682" x:Name="product" Canvas.Left="291" Canvas.Top="10"/>
+        <TextBlock Width="400" Height="200" Background="White" FontSize="25" Foreground="#FF167682" x:Name="total" TextWrapping="Wrap" Canvas.Left="291" Canvas.Top="124" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+
+
+        <Button Click="plus" Width="40" Height="40" Content="+"  Foreground="#FF167682" FontWeight="Bold" Canvas.Left="544" Canvas.Top="11" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Button Click="minus" Width="40" Height="40" Content="-"  Foreground="#FF167682" FontWeight="Bold" Canvas.Left="651" Canvas.Top="11" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBlock Width="40" Height="40" Background="White" FontSize="25" Foreground="#FF167682" x:Name="count" TextWrapping="Wrap" Canvas.Left="599" Canvas.Top="11" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+        <Button Click="dobav" Width="150" Height="40" Content="ДОБАВИТЬ"  Foreground="#FF167682" FontWeight="Bold" Canvas.Left="544" Canvas.Top="66" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+
+        <Button Click="vihod" Width="100" Height="40" Content="ВЫХОД"  Foreground="#FF167682" FontWeight="Bold" Canvas.Left="591" Canvas.Top="346" FontSize="18"/>
+    </Canvas>
 </Window>

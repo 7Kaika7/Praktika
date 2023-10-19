@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -25,48 +28,41 @@ namespace Praktika
         {
             InitializeComponent();
         }
-        StreamReader reader;
-        const string path = @"C:\Users\student\source\repos\21ИС-1\Praktika\Praktika\path.txt";
-
-        private bool CheckLoginRepeat(User user) // метод для проверки логина и пароля пользователя
-        {
-            reader = new StreamReader(path);
-            var users = new List<User>();
-            var rows = reader.ReadToEnd().Split('\n');
-            rows = rows.Where(a => !string.IsNullOrEmpty(a)).ToArray();
-            reader.Close();
-
-            foreach (string row in rows)
-            {
-                var splitRow = row.Split(' ');
-
-                users.Add(new User(splitRow[0], splitRow[1].TrimEnd('\r')));
-            }
-
-            return users.FirstOrDefault(u => u.Login == user.Login && u.Password == user.Password) is null;
 
 
-        }
+        private static string connectionString = ConfigurationManager.ConnectionStrings["regBD"].ConnectionString;
+        private static SqlConnection sqlConnection = null;
+
+
 
         private void vxod_Click(object sender, RoutedEventArgs e)
         {
-            var user = new User(login_.Text, parol_.Text);
 
-            if (CheckLoginRepeat(user))
-
+            if (login_.Text != "" && parol_.Text != "")
             {
-                MessageBox.Show("Неверный логин и/или пароль");
-            }
-            else if (!CheckLoginRepeat(user))
-            {
-                MessageBox.Show("Вы успешно вошли");
+                sqlConnection = new SqlConnection(connectionString);
+                sqlConnection.Open();
+                string command = $"select * from [log_par]";
 
-                Window2 c = new Window2(); // переход на третье окно
-                this.Hide();
-                c.ShowDialog();
-                this.Show();
-                Close();
+                SqlCommand cmd = new SqlCommand(command, sqlConnection);
+                SqlDataReader sqlDataReader = cmd.ExecuteReader();
+
+                while (sqlDataReader.Read())
+                {
+                    if (sqlDataReader[0].ToString() == login_.Text && sqlDataReader[1].ToString() == parol_.Text)
+                    {
+                        
+                        Window2 с = new Window2();
+                        this.Hide();
+                        с.ShowDialog();
+                        this.Show();
+                        Close();
+                    }
+                
+                }                       
+
             }
+            else MessageBox.Show("Заполните поля");
 
         }
 
